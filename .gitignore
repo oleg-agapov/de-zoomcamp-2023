@@ -1,0 +1,9 @@
+# python
+.ipynb_checkpoints/
+
+# containers data
+pg_data/
+pgadmin_data/
+
+# misc
+.DS_Store
