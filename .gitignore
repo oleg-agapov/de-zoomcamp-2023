@@ -5,5 +5,18 @@
 pg_data/
 pgadmin_data/
 
+# Terraform dot files
+.terraform
+.terraformrc
+**/.terraform/*
+.terraform.d
+*.tfstate
+*.tfstate.*
+terraform.rc
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
 # misc
 .DS_Store
