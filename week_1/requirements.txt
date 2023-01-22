@@ -4,3 +4,4 @@ notebook
 sqlalchemy
 pyarrow
 psycopg2
+tqdm
