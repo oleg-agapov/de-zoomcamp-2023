@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  pg_database:
+    image: postgres:13
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+    ports:
+      - 5431:5432
+  
+  pg_admin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - 8081:80
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+  
+  jupyter:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:8888:8888
+      - 4200:4200
+    entrypoint: [
+      "jupyter", "notebook", 
+      "--allow-root", "--ip", "0.0.0.0", 
+      "--NotebookApp.token=''"
+    ]
