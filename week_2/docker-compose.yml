@@ -27,11 +27,13 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/app
+      - ./prefect_data/:/root/.prefect
     ports:
       - 127.0.0.1:8888:8888
-      - 4200:4200
-    entrypoint: [
-      "jupyter", "notebook", 
-      "--allow-root", "--ip", "0.0.0.0", 
-      "--NotebookApp.token=''"
-    ]
+      - 127.0.0.1:4200:4200
+    # entrypoint: [
+    #   "jupyter", "notebook", 
+    #   "--allow-root", "--ip", "0.0.0.0", 
+    #   "--NotebookApp.token=''"
+    # ]
+    entrypoint: ["prefect", "orion", "start", "--host", "0.0.0.0"]

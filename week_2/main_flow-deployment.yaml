@@ -1,0 +1,56 @@
+###
+### A complete description of a Prefect Deployment for flow 'Upload from Cloud Storage to BigQuery table'
+###
+name: Load to BigQuery
+description: null
+version: 47387de2b445740650356f5ae3b06fd0
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Upload from Cloud Storage to BigQuery table
+manifest_path: null
+storage: null
+path: /app
+entrypoint: 2_load_to_bigquery.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      position: 0
+      type: string
+    year:
+      title: year
+      position: 1
+      type: integer
+    months:
+      title: months
+      position: 2
+      type: array
+      items: {}
+  required:
+  - color
+  - year
+  - months
+  definitions: null
+timestamp: '2023-02-03T15:27:03.508240+00:00'

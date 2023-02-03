@@ -5,6 +5,7 @@ __pycache__/
 # containers data
 pg_data/
 pgadmin_data/
+prefect_data/
 
 # Terraform dot files
 .terraform
@@ -21,3 +22,5 @@ terraform.tfvars.json
 
 # misc
 .DS_Store
+venv/
+google.json
