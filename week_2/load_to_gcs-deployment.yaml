@@ -1,9 +1,9 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'Save from web to Cloud Storage'
 ###
-name: Load to Cloud Storage
+name: Load to Storage
 description: null
-version: cd50cfcc84f685948b44ba31e944aefb
+version: 2c96cf2b782a39216010675644da41d0
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
@@ -30,7 +30,7 @@ flow_name: Save from web to Cloud Storage
 manifest_path: null
 storage: null
 path: /app
-entrypoint: 1_load_to_gcs.py:load_to_gcs
+entrypoint: load_to_gcs.py:load_to_gcs
 parameter_openapi_schema:
   title: Parameters
   type: object
@@ -52,4 +52,4 @@ parameter_openapi_schema:
   - year
   - month
   definitions: null
-timestamp: '2023-02-02T20:30:41.302991+00:00'
+timestamp: '2023-02-03T19:00:37.581618+00:00'

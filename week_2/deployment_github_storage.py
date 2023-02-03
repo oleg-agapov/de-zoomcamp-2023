@@ -7,7 +7,7 @@ github_block = GitHub.load("github-creds")
 github_deployment = Deployment.build_from_flow(
     flow=load_to_gcs,
     name="Load to GCS (github)",
-    path='week_2/load_to_gcs.py:load_to_gcs',
+    path='week_2/load_to_gcs.py',
     storage=github_block
 )
 

@@ -3,7 +3,7 @@
 ###
 name: Load to BigQuery
 description: null
-version: 47387de2b445740650356f5ae3b06fd0
+version: 4b2a7757bbe634561e125a5f2058b8f7
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
@@ -30,7 +30,7 @@ flow_name: Upload from Cloud Storage to BigQuery table
 manifest_path: null
 storage: null
 path: /app
-entrypoint: 2_load_to_bigquery.py:main_flow
+entrypoint: load_to_bigquery.py:load_to_bigquery
 parameter_openapi_schema:
   title: Parameters
   type: object
@@ -53,4 +53,4 @@ parameter_openapi_schema:
   - year
   - months
   definitions: null
-timestamp: '2023-02-03T15:27:03.508240+00:00'
+timestamp: '2023-02-03T19:02:06.232663+00:00'

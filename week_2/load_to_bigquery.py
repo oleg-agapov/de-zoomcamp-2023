@@ -37,7 +37,7 @@ def upload_to_bigquery(storage_path: str, target_table: str) -> int:
     return len(df)
 
 @flow(name='Upload from Cloud Storage to BigQuery table', log_prints=True)
-def main_flow(color: str, year: int, months: list) -> None:
+def load_to_bigquery(color: str, year: int, months: list) -> None:
     total_rows = 0
     for month in months:
         target_table = f'ny_taxi_trips.{color}_trips'
@@ -50,4 +50,4 @@ if __name__ == '__main__':
     color = 'yellow'
     year = 2021
     month = [1, 2]
-    main_flow(color, year, month)
+    load_to_bigquery(color, year, month)
