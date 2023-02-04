@@ -57,7 +57,7 @@ How many rows were processed by the script?
 
 - 88,019
 - 192,297
-- 88,605
+- 88,605 (+)
 - 190,225
 
 
@@ -88,7 +88,7 @@ How many rows were processed by the script?
 - `125,268`
 - `377,922`
 - `728,390`
-- `514,392`
+- `514,392` (+)
 
 
 ## Question 6. Secrets
@@ -97,7 +97,7 @@ Prefect Secret blocks provide secure, encrypted storage in the database and obfu
 
 - 5
 - 6
-- 8
+- 8 (+)
 - 10
 
 
