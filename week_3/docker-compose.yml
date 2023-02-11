@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  prefect:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./prefect_data/:/root/.prefect
+    ports:
+      - 127.0.0.1:4200:4200
+    entrypoint: ["prefect", "orion", "start", "--host", "0.0.0.0"]
