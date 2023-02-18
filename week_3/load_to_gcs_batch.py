@@ -43,7 +43,7 @@ def load_to_gcs(color: str, year: int, month: int) -> None:
     storage_path_parquet = f'trips/parquet/{color}/{color}_tripdata_{year}-{month:02}.parquet'
 
     content = extract_from_web(url)
-    #save_as_raw(content, storage_path)
+    save_as_raw(content, storage_path)
     save_as_parquet(content, url, storage_path_parquet)
 
 
@@ -57,8 +57,10 @@ def load_to_gcs_batch(color: str, year: int, months: list):
 
 
 if __name__ == '__main__':
-    color = 'fhv'
-    year = 2019
+    colors = ['green', 'yellow']
+    years = [2019, 2020]
     months = [x+1 for x in list(range(12))]
     
-    load_to_gcs_batch(color, year, months)
+    for color in colors:
+        for year in years:
+            load_to_gcs_batch(color, year, months)
