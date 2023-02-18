@@ -11,7 +11,7 @@ with trips as (
 zones as (
     select *
     from {{ ref('dim_zones') }}
-    -- where borough != 'Unknown'
+    where borough != 'Unknown'
 )
 
 select
@@ -43,7 +43,8 @@ select
     payment_type_description,
     congestion_surcharge
 from trips
-left join zones as pickup_zone
+inner join zones as pickup_zone
     on trips.pickup_location_id = pickup_zone.location_id
-left join zones as dropoff_zone
+inner join zones as dropoff_zone
     on trips.dropoff_location_id = dropoff_zone.location_id
+where pickup_datetime between '2019-01-01' and '2020-12-31 23:59:59'
