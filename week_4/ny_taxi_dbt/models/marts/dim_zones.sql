@@ -1,7 +1,3 @@
-{{
-    config(schema="production")
-}}
-
 select
     cast(LocationID as integer) as location_id,
     Borough as borough,
