@@ -20,6 +20,11 @@ terraform.tfvars.json
 *.auto.tfvars
 *.auto.tfvars.json
 
+# dbt
+target/
+dbt_packages/
+logs/
+
 # misc
 .DS_Store
 venv/
