@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: booming-landing-375221
+    schema: ny_taxi_trips
+
+    tables:
+      - name: green_trips
+      - name: yellow_trips
+      - name: fhv_trips
