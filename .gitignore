@@ -24,6 +24,7 @@ terraform.tfvars.json
 target/
 dbt_packages/
 logs/
+.user.yml
 
 # misc
 .DS_Store
