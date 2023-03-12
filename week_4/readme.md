@@ -10,6 +10,7 @@ docker run -it --rm -v $(pwd):/usr/app/dbt ghcr.io/dbt-labs/dbt-bigquery:1.4.0 i
 docker run -it --rm \
     --network host \
     -v $(pwd):/usr/app/dbt \
+    -v $(pwd)/.dbt:/root/.dbt \
     --entrypoint bash \
     ghcr.io/dbt-labs/dbt-bigquery:1.4.0
 ```

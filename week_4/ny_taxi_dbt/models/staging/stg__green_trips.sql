@@ -6,9 +6,9 @@ with trips as
 (
     select 
         *,
-        row_number() over(partition by vendorid, lpep_pickup_datetime) as rn
+        row_number() over(partition by VendorID, lpep_pickup_datetime) as rn
     from {{ source('raw', 'green_trips') }}
-    where vendorid is not null 
+    where VendorID is not null 
 )
 
 select
